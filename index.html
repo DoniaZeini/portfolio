@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Donia Zeini — Mechatronics Engineering Student at Yildiz Technical University. Embedded systems, automation, and software engineering portfolio.">
+    <title>Donia Zeini | Mechatronics Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Apply saved theme immediately to prevent flash of wrong theme
+        (function() {
+            var t = localStorage.getItem('theme');
+            if (t === 'light') document.documentElement.setAttribute('data-theme', 'light');
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">DZ<span class="nav-logo-dot">.</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#certificates" class="nav-link">Certificates</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="theme-toggle-thumb">
+                        <svg class="theme-icon icon-moon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                        <svg class="theme-icon icon-sun" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    </span>
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="home">
+        <canvas class="hero-particles" id="heroParticles"></canvas>
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-subtitle">Mechatronics Engineering Student</span>
+                <h1 class="hero-name">
+                    <span class="hero-name-line hero-name-first">Donia</span>
+                    <span class="hero-name-line hero-name-last">Zeini</span>
+                </h1>
+                <p class="hero-tagline">Engineering the bridge between mechanical systems &amp; intelligent software</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View Work</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <span>Contact Me</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="monogram-wrapper">
+                    <div class="monogram-orbit">
+                        <div class="orbit-dot"></div>
+                    </div>
+                    <div class="monogram-orbit monogram-orbit-2">
+                        <div class="orbit-dot"></div>
+                    </div>
+                    <div class="monogram-ring"></div>
+                    <div class="monogram-ring monogram-ring-inner"></div>
+                    <div class="monogram">DZ</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Get To Know Me</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p><strong>Mechatronics Engineering</strong> student at Yildiz Technical University with a keen interest in automotive systems. Focused on embedded systems, automation, and the integration of mechanical systems with software.</p>
+                    <p>Hands-on experience in social media design and management. Fluent in Arabic and Romanian, with working proficiency in English.</p>
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>
+                        </div>
+                        <div class="education-info">
+                            <h4>B.Sc. Mechatronics Engineering</h4>
+                            <p>Yildiz Technical University</p>
+                            <span class="education-date">Oct 2023 – Present · Expected 2027</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-languages reveal reveal-delay-1">
+                    <h3 class="about-languages-title">Languages I Speak</h3>
+                    <div class="language-list">
+                        <div class="language-item">
+                            <div class="language-header">
+                                <span class="language-name">Romanian</span>
+                                <span class="language-level">Native</span>
+                            </div>
+                            <div class="language-bar"><div class="language-fill" data-width="100"></div></div>
+                        </div>
+                        <div class="language-item">
+                            <div class="language-header">
+                                <span class="language-name">Arabic</span>
+                                <span class="language-level">Native</span>
+                            </div>
+                            <div class="language-bar"><div class="language-fill" data-width="100"></div></div>
+                        </div>
+                        <div class="language-item">
+                            <div class="language-header">
+                                <span class="language-name">English</span>
+                                <span class="language-level">Working Proficiency</span>
+                            </div>
+                            <div class="language-bar"><div class="language-fill" data-width="75"></div></div>
+                        </div>
+                        <div class="language-item">
+                            <div class="language-header">
+                                <span class="language-name">Turkish</span>
+                                <span class="language-level">Elementary</span>
+                            </div>
+                            <div class="language-bar"><div class="language-fill" data-width="35"></div></div>
+                        </div>
+                        <div class="language-item">
+                            <div class="language-header">
+                                <span class="language-name">Italian</span>
+                                <span class="language-level">Beginner</span>
+                            </div>
+                            <div class="language-bar"><div class="language-fill" data-width="15"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ========== SKILLS SECTION ========== -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">What I Work With</span>
+                <h2 class="section-title">Skills</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skills-category reveal">
+                    <div class="skills-category-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                    <h3 class="skills-category-title">Programming Languages</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">.NET</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+                <div class="skills-category reveal reveal-delay-1">
+                    <div class="skills-category-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <h3 class="skills-category-title">Software &amp; Tools</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">SolidWorks</span>
+                        <span class="skill-tag">AutoCAD-2D</span>
+                        <span class="skill-tag">Proteus</span>
+                        <span class="skill-tag">MATLAB / Simulink</span>
+                        <span class="skill-tag">Panasonic FPWIN</span>
+                        <span class="skill-tag">Visual Studio</span>
+                        <span class="skill-tag">VS Code</span>
+                    </div>
+                </div>
+                <div class="skills-category reveal reveal-delay-2">
+                    <div class="skills-category-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    </div>
+                    <h3 class="skills-category-title">Engineering Domains</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Embedded Systems</span>
+                        <span class="skill-tag">Automation</span>
+                        <span class="skill-tag">PLC Programming</span>
+                        <span class="skill-tag">CAD</span>
+                        <span class="skill-tag">Control Systems</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">3D Modeling</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROJECTS SECTION ========== -->
+    <section class="section section-alt" id="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">What I've Built</span>
+                <h2 class="section-title">Projects</h2>
+            </div>
+            <div class="projects-grid">
+
+                <div class="project-card reveal">
+                    <div class="project-icon">🧠</div>
+                    <h3 class="project-title">Multi-Agent RAG + MCP System</h3>
+                    <p class="project-desc">Modular multi-agent system for document analysis featuring specialized agents for query reformulation, domain routing, retrieval, synthesis, and critical evaluation via the Model Context Protocol.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-icon">🏭</div>
+                    <h3 class="project-title">Automated Factory Production Line</h3>
+                    <p class="project-desc">Automated toy production line controlled by PLC with ultrasonic and RGB sensors, DC motor conveyor, servo sorting, PID control, Ladder Diagram programming, and real-time HMI monitoring.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">PLC</span>
+                        <span class="project-tag">FPWIN7</span>
+                        <span class="project-tag">MATLAB</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-icon">🍕</div>
+                    <h3 class="project-title">Pizza Order Management System</h3>
+                    <p class="project-desc">Clean and minimal C# application practicing advanced OOD principles with a modular architecture for order processing, menu management, and dynamic pricing.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">C#</span>
+                        <span class="project-tag">.NET</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-icon">⚡</div>
+                    <h3 class="project-title">Three-Phase Induction Motor Simulation</h3>
+                    <p class="project-desc">Comprehensive mathematical model and simulation of a three-phase asynchronous motor using Clarke and Park transformations, analyzing dynamic behavior and transient responses.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">MATLAB</span>
+                        <span class="project-tag">Simulink</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-icon">🤖</div>
+                    <h3 class="project-title">Robotic Arm Control (3 DOF)</h3>
+                    <p class="project-desc">Designed and programmed a 3-degree-of-freedom robotic arm controlled via potentiometers using a PIC 16F887 microcontroller.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">C</span>
+                        <span class="project-tag">CCS C</span>
+                        <span class="project-tag">Proteus</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-icon">🏦</div>
+                    <h3 class="project-title">Bank System</h3>
+                    <p class="project-desc">Console banking application simulating client management, banking operations, and authentication using OOP principles with file handling and bitwise permission management.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">C++</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-icon">🔧</div>
+                    <h3 class="project-title">Mass-Spring-Damper Simulation</h3>
+                    <p class="project-desc">Modeling and simulation of a mass-spring-damper system using the Runge-Kutta method, managing simulation data across multiple file formats and a database.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-icon">⚙️</div>
+                    <h3 class="project-title">Spring-Mass-Pulley System Modeling</h3>
+                    <p class="project-desc">Modeled and analyzed a spring-mass-pulley system, simulating system response and parameter sensitivity, evaluating pulley inertia and spring stiffness effects.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">MATLAB</span>
+                        <span class="project-tag">Simulink</span>
+                    </div>
+                </div>
+
+                <!-- ADD MORE PROJECTS HERE — copy a project-card block above -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CERTIFICATES SECTION ========== -->
+    <section class="section" id="certificates">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Achievements</span>
+                <h2 class="section-title">Certificates</h2>
+            </div>
+            <p class="section-subtitle reveal">Click any certificate to view, save, or print it.</p>
+            <div class="certificates-grid">
+
+                <!-- 
+                    HOW TO ADD A CERTIFICATE:
+                    1. Place your certificate file (PDF or image) in the "certificates/" folder
+                    2. Copy one of the certificate-card blocks below
+                    3. Update data-file="certificates/YOUR_FILE_NAME.pdf"
+                    4. Update the title and issuer text
+                -->
+
+                <!-- ── Dassault Systèmes ── -->
+                <div class="certificate-card reveal" data-file="certificates/Certificate_C-JWNB5P96VM.pdf">
+                    <div class="certificate-badge">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <h3 class="certificate-title">SolidWorks Associate — Mechanical Design</h3>
+                    <span class="certificate-issuer">Dassault Systèmes</span>
+                    <button class="certificate-btn" aria-label="View SolidWorks certificate">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        <span>View Certificate</span>
+                    </button>
+                </div>
+
+                <!-- ── DeepLearning.AI & Stanford ── -->
+                <div class="certificate-card reveal" data-file="certificates/Coursera JI7OXLC4C5ZO.pdf">
+                    <div class="certificate-badge">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <h3 class="certificate-title">Supervised Machine Learning: Regression and Classification</h3>
+                    <span class="certificate-issuer">DeepLearning.AI &amp; Stanford Online</span>
+                    <button class="certificate-btn" aria-label="View Coursera ML certificate">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        <span>View Certificate</span>
+                    </button>
+                </div>
+
+
+
+                <!-- ── MathWorks ── -->
+                <div class="certificate-card reveal" data-file="certificates/Matlab/certificate_StateflowOnramp.pdf">
+                    <div class="certificate-badge">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <h3 class="certificate-title">MATLAB Onramp</h3>
+                    <span class="certificate-issuer">MathWorks</span>
+                    <button class="certificate-btn" aria-label="View MATLAB certificate">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        <span>View Certificate</span>
+                    </button>
+                </div>
+
+
+
+                <div class="certificate-card reveal" data-file="certificates/Gelecegi Yazan Kadinlar Programi Egitim Katilim Belgesi DONIA ZEINI.pdf">
+                    <div class="certificate-badge">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <h3 class="certificate-title">Geleceği Yazan Kadınlar Yapay Zeka Programı</h3>
+                    <span class="certificate-issuer">Turkcell Akademi</span>
+                    <button class="certificate-btn" aria-label="View Turkcell AI program certificate">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        <span>View Certificate</span>
+                    </button>
+                </div>
+
+                <!-- ── ProgrammingAdvices ── -->
+                <div class="certificate-card reveal" data-file="certificates/ProgrammingAdvices/certificate-of-completion-for-algorithms-problem-solving-level-2.pdf">
+                    <div class="certificate-badge">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <h3 class="certificate-title">Algorithms &amp; Problem-Solving Level 2</h3>
+                    <span class="certificate-issuer">ProgrammingAdvices</span>
+                    <button class="certificate-btn" aria-label="View Algorithms L2 certificate">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        <span>View Certificate</span>
+                    </button>
+                </div>
+
+                <div class="certificate-card reveal" data-file="certificates/ProgrammingAdvices/certificate-of-completion-for-introduction-to-programming-using-c-level-2.pdf">
+                    <div class="certificate-badge">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <h3 class="certificate-title">Introduction to Programming Using C++ Level 2</h3>
+                    <span class="certificate-issuer">ProgrammingAdvices</span>
+                    <button class="certificate-btn" aria-label="View C++ L2 certificate">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        <span>View Certificate</span>
+                    </button>
+                </div>
+
+                <div class="certificate-card reveal" data-file="certificates/ProgrammingAdvices/certificate-of-completion-for-algorithms-problem-solving-level-3.pdf">
+                    <div class="certificate-badge">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <h3 class="certificate-title">Algorithms &amp; Problem Solving Level 3</h3>
+                    <span class="certificate-issuer">ProgrammingAdvices</span>
+                    <button class="certificate-btn" aria-label="View Algorithms L3 certificate">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        <span>View Certificate</span>
+                    </button>
+                </div>
+
+                <div class="certificate-card reveal" data-file="certificates/ProgrammingAdvices/certificate-of-completion-for-08-algorithms-problem-solving-level-4.pdf">
+                    <div class="certificate-badge">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <h3 class="certificate-title">Algorithms &amp; Problem Solving Level 4</h3>
+                    <span class="certificate-issuer">ProgrammingAdvices</span>
+                    <button class="certificate-btn" aria-label="View Algorithms L4 certificate">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        <span>View Certificate</span>
+                    </button>
+                </div>
+
+                <div class="certificate-card reveal" data-file="certificates/ProgrammingAdvices/certificate-of-completion-for-13-algorithms-problem-solving-level-5.pdf">
+                    <div class="certificate-badge">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <h3 class="certificate-title">Algorithms &amp; Problem Solving Level 5</h3>
+                    <span class="certificate-issuer">ProgrammingAdvices</span>
+                    <button class="certificate-btn" aria-label="View Algorithms L5 certificate">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        <span>View Certificate</span>
+                    </button>
+                </div>
+
+                <div class="certificate-card reveal" data-file="certificates/ProgrammingAdvices/certificate-of-completion-for-10-oop-as-it-should-be-concepts.pdf">
+                    <div class="certificate-badge">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <h3 class="certificate-title">OOP As It Should Be — Concepts</h3>
+                    <span class="certificate-issuer">ProgrammingAdvices</span>
+                    <button class="certificate-btn" aria-label="View OOP Concepts certificate">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        <span>View Certificate</span>
+                    </button>
+                </div>
+
+                <div class="certificate-card reveal" data-file="certificates/ProgrammingAdvices/certificate-of-completion-for-11-oop-as-it-should-be-applications.pdf">
+                    <div class="certificate-badge">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <h3 class="certificate-title">OOP As It Should Be — Applications</h3>
+                    <span class="certificate-issuer">ProgrammingAdvices</span>
+                    <button class="certificate-btn" aria-label="View OOP Applications certificate">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        <span>View Certificate</span>
+                    </button>
+                </div>
+
+                <div class="certificate-card reveal" data-file="certificates/ProgrammingAdvices/certificate-of-completion-for-12-data-structures-level1.pdf">
+                    <div class="certificate-badge">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <h3 class="certificate-title">Data Structures Level 1</h3>
+                    <span class="certificate-issuer">ProgrammingAdvices</span>
+                    <button class="certificate-btn" aria-label="View Data Structures certificate">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        <span>View Certificate</span>
+                    </button>
+                </div>
+
+                <div class="certificate-card reveal" data-file="certificates/ProgrammingAdvices/certificate-of-completion-for-14-c-level-1.pdf">
+                    <div class="certificate-badge">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <h3 class="certificate-title">C# Level 1</h3>
+                    <span class="certificate-issuer">ProgrammingAdvices</span>
+                    <button class="certificate-btn" aria-label="View C# certificate">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        <span>View Certificate</span>
+                    </button>
+                </div>
+
+                <!-- ── ProgrammingAdvices — SQL ── -->
+                <div class="certificate-card reveal" data-file="certificates/ProgrammingAdvices/certificate-of-completion-for-15-database-level-1-sql-concepts-and-practice.pdf">
+                    <div class="certificate-badge">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <h3 class="certificate-title">Database Level 1 — SQL Concepts &amp; Practice</h3>
+                    <span class="certificate-issuer">ProgrammingAdvices</span>
+                    <button class="certificate-btn" aria-label="View SQL Database certificate">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        <span>View Certificate</span>
+                    </button>
+                </div>
+
+                <!-- ADD MORE CERTIFICATE CARDS HERE -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section class="section section-alt" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title">Contact</h2>
+            </div>
+            <p class="contact-intro reveal">Have a question or want to work together? Feel free to reach out.</p>
+            <div class="contact-links reveal">
+
+                <a href="mailto:donia.zeini@std.yildiz.edu.tr" class="contact-card" id="contact-email">
+                    <div class="contact-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    </div>
+                    <div class="contact-text">
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">donia.zeini@std.yildiz.edu.tr</span>
+                    </div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/doniazeini" target="_blank" rel="noopener noreferrer" class="contact-card" id="contact-linkedin">
+                    <div class="contact-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    </div>
+                    <div class="contact-text">
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">Connect with me</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/DoniaZeini" target="_blank" rel="noopener noreferrer" class="contact-card" id="contact-github">
+                    <div class="contact-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    </div>
+                    <div class="contact-text">
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value">View my repositories</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <span class="footer-text">&copy; 2026 Donia Zeini. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <!-- Certificate Viewer Modal (for images) -->
+    <div class="modal-overlay" id="certModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTitle">Certificate</h3>
+                <div class="modal-actions">
+                    <button class="modal-btn" id="modalPrint" title="Print">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                    </button>
+                    <a class="modal-btn" id="modalDownload" href="#" download title="Save">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    </a>
+                    <button class="modal-btn modal-close" id="modalClose" title="Close">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="Certificate">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
